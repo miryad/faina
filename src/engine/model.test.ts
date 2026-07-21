@@ -1,0 +1,3 @@
+import {describe,it,expect} from 'vitest'; import {calculate} from './model';
+const s={id:'x',name:'Base',facility:'industrial' as const,organism:'yeast' as const,titer:100,productivity:2,batchTime:50,yieldMode:'metabolic' as const,metabolicYield:.5,recovery:.85,fermenterVolume:100,price:12,substratePrice:.4,dsp:1,drying:.3,purification:.5};
+describe('model',()=>{it('returns positive scale and integer reactors',()=>{const r=calculate(s);expect(r.annualKg).toBeGreaterThan(0);expect(Number.isInteger(r.reactors)).toBe(true)});it('derives batch time',()=>{const r=calculate({...s,batchTime:undefined});expect(r.resolved.batchTime).toBe(50)})});

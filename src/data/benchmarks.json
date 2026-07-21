@@ -1,0 +1,16 @@
+{
+  "meta":{"version":"0.1","principle":"No hidden assumptions. Every estimate is inspectable."},
+  "facilityProfiles":{
+    "industrial":{"label":"Industrial / food","capexMultiplier":[1.0,1.25,1.55],"fixedOpexShare":[0.055,0.075,0.10],"utilityCostPerKg":[0.18,0.35,0.65],"defaultRecovery":0.82,"sourceType":"engineering heuristic"},
+    "pharma":{"label":"Pharma-grade","capexMultiplier":[2.2,3.0,4.2],"fixedOpexShare":[0.12,0.18,0.26],"utilityCostPerKg":[1.5,3.5,8.0],"defaultRecovery":0.68,"sourceType":"engineering heuristic"}
+  },
+  "organisms":{
+    "yeast":{"label":"Yeast","titer":[40,100,180],"productivity":[0.5,2.0,5.0],"recovery":[0.70,0.85,0.95]},
+    "bacteria":{"label":"Bacteria","titer":[20,80,160],"productivity":[0.4,1.8,5.0],"recovery":[0.65,0.82,0.94]},
+    "fungi":{"label":"Filamentous fungi","titer":[15,60,130],"productivity":[0.15,0.8,2.5],"recovery":[0.55,0.75,0.90]},
+    "mammalian":{"label":"Mammalian cells","titer":[1,5,15],"productivity":[0.01,0.05,0.2],"recovery":[0.45,0.65,0.85]}
+  },
+  "capex":{"reactorReferenceVolumeM3":100,"reactorReferenceCostM":5.5,"scaleExponent":0.62,"fermentationTrainMultiplier":[2.2,3.0,4.0],"completeFacilityMultiplier":[4.0,6.0,9.0]},
+  "finance":{"projectLifeYears":15,"discountRate":0.12,"maintenancePct":0.025},
+  "operations":{"operatingDays":330,"availability":0.90,"workingVolumeFraction":0.80,"turnaroundHours":18}
+}
